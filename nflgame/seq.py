@@ -2,6 +2,7 @@ from collections import OrderedDict
 import functools
 import itertools
 import operator
+from collections import OrderedDict
 
 from nflgame import statmap
 
@@ -299,7 +300,7 @@ class GenPlayerStats (Gen):
         """
         import csv
 
-        fields, rows = set([]), []
+        fields, rows = {}, []
         players = list(self)
         for p in players:
             for field, stat in p.stats.items():

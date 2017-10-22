@@ -4,7 +4,6 @@ import os.path as path
 import gzip
 import json
 import socket
-import sys
 
 import requests
 
