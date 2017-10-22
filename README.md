@@ -1,3 +1,8 @@
+This is a fork of [BurntSushi/nflgame](https://github.com/BurntSushi/nflgame)
+to work on Python 3. The original README (slightly edited) follows.
+
+-----
+
 nflgame is an API to retrieve and read NFL Game Center JSON data.
 It can work with real-time data, which can be used for fantasy football.
 
@@ -113,18 +118,16 @@ On all platforms, it is recommend to install it with `pip`:
 pip install nflgame
 ```
 
-(You may need to use `pip2` if Python 3 is the default on your system.)
-
 If you can't get `pip` to work on Windows, then you can try downloading the
 Windows installer on nflgame's PyPI page.
 
-nflgame's core functionality can be used without any dependencies beyond the
+nflgame's core functionality depends on `requests` in addition to the
 Python standard library, but `nflgame.live` depends on `pytz` and the
-`nflgame-update-players` script depends on `httplib2` and `beautifulsoup4`.
+`nflgame-update-players` script depends on `beautifulsoup4`.
 All three dependencies are installed automatically if you install nflgame from
 PyPI with `pip`.
 
-nflgame does not yet work on Python 3, but it should work with Python 2.7.
+nflgame works on Python 2.7 & 3.2+.
 
 
 ### Updating the player database (e.g., rosters)
@@ -162,4 +165,3 @@ from an entire season:
 ```python
 nflgame.combine(nflgame.games(2010)).csv('season2010.csv')
 ```
-
