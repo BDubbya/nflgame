@@ -2,7 +2,6 @@ from collections import OrderedDict
 import functools
 import itertools
 import operator
-from collections import OrderedDict
 
 from nflgame import statmap
 
@@ -93,8 +92,7 @@ class Gen (object):
                 return getattr(item, field) == value
             preds.append(functools.partial(pred, k, v))
 
-        gen = filter(lambda item: all([f(item) for f in preds]),
-                                self)
+        gen = filter(lambda item: all([f(item) for f in preds]), self)
         return self.__class__(gen)
 
     def limit(self, n):
@@ -241,8 +239,7 @@ class GenPlayerStats (Gen):
         return self.__class__(gen())
 
     def __filter_category(self, cat):
-        return self.__class__(filter(lambda p: p.has_cat(cat),
-                                                self))
+        return self.__class__(filter(lambda p: p.has_cat(cat), self))
 
     def passing(self):
         """Returns players that have a "passing" statistical category."""

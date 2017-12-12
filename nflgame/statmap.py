@@ -65,6 +65,7 @@ def values(category_id, yards):
         vals[f] = info.get('value', 1)
     return vals
 
+
 categories = ("passing", "rushing", "receiving",
               "fumbles", "kicking", "punting", "kickret", "puntret",
               "defense", "penalty")

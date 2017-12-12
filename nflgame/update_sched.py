@@ -194,5 +194,6 @@ def run():
                 update_week(sched, y, p, w)
     write_schedule(args.json_update_file, sched)
 
+
 if __name__ == '__main__':
     run()

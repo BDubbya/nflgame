@@ -41,6 +41,7 @@ def _create_schedule(jsonf=None):
             last_updated = datetime.datetime.now()
     return d, last_updated
 
+
 games, last_updated = _create_schedule()
 
 __pdoc__['nflgame.sched.games'] = """
