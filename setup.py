@@ -3,8 +3,6 @@ from setuptools import setup
 from glob import glob
 import os.path as path
 
-from nflgame.version import __version__
-
 # Snippet taken from - http://goo.gl/BnjFzw
 # It's to fix a bug for generating a Windows distribution on Linux systems.
 # Linux doesn't have access to the "mbcs" encoding.
@@ -25,7 +23,7 @@ longdesc = codecs.open(path.join(cwd, 'longdesc.rst'), 'r', 'ascii').read()
 version = '0.0.0'
 with codecs.open(path.join(cwd, 'nflgame/version.py'), 'r', 'ascii') as f:
     exec(f.read())
-    version = __version__
+    version = __version__  # noqa should be defined in the above line
 assert version != '0.0.0'
 
 setup(
