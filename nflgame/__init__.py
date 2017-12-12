@@ -90,19 +90,6 @@ import nflgame.seq
 from nflgame.version import __version__
 from functools import reduce
 
-if sys.version_info[:2] != (2, 7):
-    print("nflgame requires Python 2.7 and does not yet work with Python 3")
-    print("You are running Python version {}.{}".format(
-        sys.version_info.major, sys.version_info.minor))
-    sys.exit(1)
-
-import nflgame.game  # noqa
-import nflgame.live  # noqa
-import nflgame.player  # noqa
-import nflgame.sched  # noqa
-import nflgame.seq  # noqaj
-from nflgame.version import __version__  # noqa
-
 VERSION = __version__  # Deprecated. Backwards compatibility.
 
 NoPlayers = nflgame.seq.GenPlayerStats(None)
