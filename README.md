@@ -1,14 +1,15 @@
 This is a fork of [BurntSushi/nflgame](https://github.com/BurntSushi/nflgame)
-to work on Python 3. The original README (slightly edited) follows.
+to work on Python 3 (in addition to Python 2.7).
+The original README (slightly edited) follows.
 
 -----
 
 nflgame is an API to retrieve and read NFL Game Center JSON data.
 It can work with real-time data, which can be used for fantasy football.
 
-**PLEASE DO NOT EMAIL ME QUESTIONS. USE THE
-[ISSUE TRACKER](https://github.com/BurntSushi/nflgame/issues) TO ASK
-QUESTIONS.**
+**PLEASE USE THE
+[ISSUE TRACKER](https://github.com/mlenzen/nflgame/issues) TO ASK
+QUESTIONS OR REPORT BUGS.**
 
 nflgame works by parsing the same JSON data that powers NFL.com's live
 GameCenter. Therefore, nflgame can be used to report game statistics while
@@ -115,7 +116,7 @@ nflgame is in the
 On all platforms, it is recommend to install it with `pip`:
 
 ```
-pip install nflgame
+pip install git+git://github.com/mlenzen/nflgame.git
 ```
 
 If you can't get `pip` to work on Windows, then you can try downloading the
