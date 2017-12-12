@@ -71,7 +71,7 @@ class Player (object):
         plays = []
         games = nflgame.games(year, week)
         for g in games:
-            plays += [p for p in list(g.drives.plays()) if p.has_player(self.playerid)]
+            plays += [p for p in g.drives.plays() if p.has_player(self.playerid)]
         return nflgame.seq.GenPlays(plays)
 
     def __str__(self):
